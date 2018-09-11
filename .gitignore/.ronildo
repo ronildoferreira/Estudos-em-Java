@@ -1,0 +1,959 @@
+import java.util.Scanner;
+
+public class Lista_01 {
+
+	public static Scanner sc;
+
+	public static void questao01() {
+
+		sc = new Scanner(System.in);
+		System.out.println("Digite o seu Salario:");
+		double salario = sc.nextFloat();
+
+		double ajuste = salario + (salario * 0.10);
+
+		System.out.println("Salario com Ajuste de 10% é:" + ajuste);
+		sc.close();
+	}
+
+	public static void questao02() {
+
+		sc = new Scanner(System.in);
+		System.out.println("Escreva o Valor de X:");
+		float x = sc.nextFloat();
+
+		float f = (3 * (x * x) + 2 * x) + 7;
+
+		System.out.println("O valor de f(x) é:" + f);
+
+		sc.close();
+	}
+
+	public static void questao03() {
+		sc = new Scanner(System.in);
+
+		System.out.println("Digite um Numero:");
+		int numero = sc.nextInt();
+
+		int antecessor = numero - 1;
+		int sucessor = numero + 1;
+
+		System.out.println("Numero Antecessor:" + antecessor);
+		System.out.println("Numero Sucessor:" + sucessor);
+
+		sc.close();
+	}
+
+	public static void questao04() {
+		sc = new Scanner(System.in);
+		System.out.println("N-1:");
+		int n1 = sc.nextInt();
+		System.out.println("N-2:");
+		int n2 = sc.nextInt();
+
+		float total = n1 % n2;
+
+		System.out.println("O resto da Divisão é:" + total);
+
+		sc.close();
+	}
+
+	public static void questao05() {
+		sc = new Scanner(System.in);
+
+		double HrTra, QtdHrs, TotalHrs;
+
+		System.out.println("Digite o valor da hora de Trabalho do Professor:");
+
+		HrTra = Double.valueOf(sc.nextLine());
+
+		System.out.println("Digite a Quantidade de Horas Trabalhadas:");
+		QtdHrs = Double.valueOf(sc.nextLine());
+
+		TotalHrs = HrTra * QtdHrs;
+
+		System.out.println("Salario do Professor por horas Trabalhadas:" + TotalHrs);
+
+		sc.close();
+
+	}
+
+	public static void questao06() {
+
+		sc = new Scanner(System.in);
+		System.out.println("Digite a Velocidade Media:");
+		float vm = sc.nextFloat();
+		System.out.println("Tempo Gasto na Viajem:");
+		float t = sc.nextFloat();
+
+		float distancia = t * vm;
+		float litros = (float) distancia / 12;
+
+		System.out.println("Distancia Percorrida:" + distancia);
+		System.out.println("Quantidade de Litros:" + litros);
+
+		sc.close();
+	}
+
+	public static void questao07() {
+
+		sc = new Scanner(System.in);
+		System.out.println("Digite a data em ddmmaa: ");
+		int data = sc.nextInt();
+
+		int a = data % 10000;
+		data = data / 10000;
+		int m = data % 100;
+
+		data = data / 100;
+		int d = data;
+
+		System.out.println("Dia:" + d);
+		System.out.println("Mes:" + m);
+		System.out.println("Ano:" + a);
+		sc.close();
+	}
+
+	public static void questao08() {
+		sc = new Scanner(System.in);
+		System.out.println("Valor do Salario de uma Pessoa:");
+		float salario = sc.nextFloat();
+		System.out.println("Valor do Salario Minimo:");
+		float salarioMinimo = sc.nextFloat();
+
+		float QtdSalario = (salario / salarioMinimo);
+
+		System.out.println("A quantidade de Salario é:" + QtdSalario);
+
+		sc.close();
+	}
+
+	public static void questao09() {
+		sc = new Scanner(System.in);
+		System.out.println("1-Numero:");
+		int n1 = sc.nextInt();
+		System.out.println("2-Numero:");
+		int n2 = sc.nextInt();
+
+		int soma = n1 + n2;
+		int subtração = n1 - n2;
+		int multiplicação = n1 * n2;
+
+		System.out.println("Soma:" + soma);
+		System.out.println("subtração:" + subtração);
+		System.out.println("multiplicação:" + multiplicação);
+
+		sc.close();
+	}
+
+	public static void questao10() {
+		sc = new Scanner(System.in);
+		System.out.println("1-Nota");
+		float n1 = sc.nextFloat();
+		System.out.println("2-Nota");
+		float n2 = sc.nextFloat();
+
+		float media = (n1 + n2) / 2;
+
+		System.out.println("Media da Notas é:" + media);
+
+		sc.close();
+
+	}
+
+	public static void questao11() {
+
+		sc = new Scanner(System.in);
+		int numero;
+
+		System.out.println("Digite a nota:");
+		do {
+			numero = sc.nextInt();
+			if (numero < 0 || numero > 10)
+				System.out.println("Nota invalida, tente novamente!!!");
+
+		} while (numero > 10 || numero < 0);
+		sc.close();
+	}
+
+	public static void questao12() {
+
+		sc = new Scanner(System.in);
+		int x = 2;
+		String user;
+		String senha;
+
+		while (x != 10) {
+			System.out.println("Digite o usuario:");
+			user = sc.nextLine();
+			System.out.println("Digite a senha:");
+			senha = sc.nextLine();
+
+			if (user.equals(senha)) {
+				System.out.println("Usario igual a senha\nTente novamente->");
+			} else
+
+				x = 10;
+
+		}
+
+	}
+
+	public static void questao13() {
+
+		sc = new Scanner(System.in);
+
+		System.out.println("Digite o nome: ");
+		String nome = sc.nextLine();
+		if (nome.length() > 3)
+			System.out.println("Nome valido");
+		else
+			System.out.println("Nome invalido");
+
+		System.out.println("Digite a idade: ");
+		int idade = sc.nextInt();
+
+		if (idade >= 0 | idade <= 150)
+			System.out.println("Idade valido");
+		else
+			System.out.println("Nome invalido");
+
+		System.out.println("Digite o salario: ");
+		float sal = sc.nextFloat();
+
+		if (sal > 0)
+			System.out.println("Salario valido!!!");
+		else
+			System.out.println("Salario Invalido!!!");
+
+		System.out.println("Digite o sexo: ");
+		String sexo = sc.next();
+
+		if (sexo.equals("f") || sexo.equals("m"))
+
+			System.out.println("Sexo valido");
+		else
+			System.out.println("Sexo Invalido");
+
+		System.out.println("Digite seu estado civil");
+		String e = sc.next();
+
+		if (e.equals("s") || e.equals("c") || e.equals("d") || e.equals("v"))
+			System.out.println("Estado civil valido");
+		else
+			System.out.println("Estado civil Invalido");
+
+		sc.close();
+	}
+
+	public static void questao14() {
+
+		double Paisa = 80000, Paisb = 200000;
+		int ano = 0;
+
+		while (Paisa != Paisb) {
+			Paisa *= 1.03;
+			Paisb *= 1.015;
+
+			// Paisa = Paisa + (Paisa * 0.03);
+			// Paisb = Paisb + (Paisb * 0.015);
+			ano++;
+		}
+		System.out.println("Anos: " + ano);
+	}
+
+	public static void questao15() {
+
+		sc = new Scanner(System.in);
+
+		double pais_A, pais_B, taxa_A, taxa_B;
+
+		int ano = 0;
+		System.out.println("Digite a Quantidade de Pessoas do Pais A:");
+		pais_A = Double.valueOf(sc.nextLine());
+
+		System.out.println("Digite a Quantidade de Pessoas do Pais B:");
+		pais_B = Double.valueOf(sc.nextLine());
+
+		System.out.println("Taxa de Crescimento do Pais A:");
+		taxa_A = Double.valueOf(sc.nextLine());
+
+		System.out.println("Taxa de Crescimento do Pais B:");
+		taxa_B = Double.valueOf(sc.nextLine());
+
+		while (pais_A < pais_B) {
+			pais_A *= 1.03;
+			pais_B *= 1.015;
+
+			// Paisa = Paisa + (Paisa * 0.03);
+			// Paisb = Paisb + (Paisb * 0.015);
+			ano++;
+		}
+		System.out.println("Anos: " + ano);
+		sc.close();
+	}
+
+	public static void questao16() {
+		int i;
+		int[] vetor = new int[20];
+
+		for (i = 1; i <= 20; i++) {
+			System.out.println(i);
+			vetor[i - 1] = i;
+		}
+		for (i = 0; i < 20; i++)
+			// Para os Numeros irem em uma linha colocar apenas o print
+			System.out.print(vetor[i] + "\0");
+		vetor.clone();
+	}
+
+	public static void questao17() {
+		sc = new Scanner(System.in);
+		int i, maior = 0, n;
+		System.out.println("Digite um Numero:");
+
+		for (i = 0; i < 5; i++) {
+			n = sc.nextInt();
+			if (n > maior) {
+
+				maior = n;
+
+			}
+		}
+		System.out.println("Maior Numero:" + maior);
+		sc.close();
+
+	}
+
+	public static void questao18() {
+
+		sc = new Scanner(System.in);
+		float n1 = sc.nextFloat();
+		float n2 = sc.nextFloat();
+		float n3 = sc.nextFloat();
+		float n4 = sc.nextFloat();
+		float n5 = sc.nextFloat();
+
+		float soma = n1 + n2 + n3 + n4 + n5;
+
+		float media = (n1 + n2 + n3 + n4 + n5) / 5;
+
+		System.out.println("Soma:" + soma);
+		System.out.println("Media dos Numeros:" + media);
+
+		sc.close();
+	}
+
+	public static void questao19() {
+		sc = new Scanner(System.in);
+
+		int i;
+
+		for (i = 1; i <= 50; i++) {
+
+			if (i % 2 == 1) {
+
+				System.out.println(i);
+			}
+		}
+
+		sc.close();
+	}
+
+	public static void questao20() {
+
+		int i;
+
+		sc = new Scanner(System.in);
+		System.out.println("Intervalo entre os numeros");
+		System.out.println("N-1:");
+		int n1 = sc.nextInt();
+		System.out.println("N-2:");
+		int n2 = sc.nextInt();
+
+		if (n1 < n2) {
+			for (i = n1 + 1; i < n2; i++)
+				System.out.print(i + "\0");
+		} else
+			for (i = n2; i < n1; i++)
+				System.out.print(i + "\0");
+		sc.close();
+	}
+
+	public static void questao21() {
+
+		sc = new Scanner(System.in);
+		int i;
+		double soma;
+		System.out.println("Intervalo entre os numeros");
+		System.out.println("N-1:");
+		int n1 = sc.nextInt();
+		System.out.println("N-2:");
+		int n2 = sc.nextInt();
+
+		if (n1 < n2) {
+			soma = 0;
+			for (i = n1 + 1; i < n2; i++) {
+				System.out.print(i + ",");
+				soma = soma + i;
+			}
+		} else {
+			soma = 0;
+			for (i = n2 + 1; i < n1; i++) {
+				System.out.print(i + ",");
+				soma = soma + i;
+			}
+		}
+		System.out.println("");
+		System.out.println("A soma dos numeros entre o intervalo é: " + soma);
+
+	}
+
+	public static void questao22() {
+
+		sc = new Scanner(System.in);
+
+		int i;
+
+		System.out.println("Digite o numero Para gerar sua Taboada:");
+		int numero = sc.nextInt();
+		double x = numero;
+
+		for (i = 1; i <= 10; i++) {
+			System.out.print(numero + "+" + i + "=" + (i + numero) + "   ");
+			System.out.print(numero + "-" + i + "=" + (numero - i) + "     ");
+			System.out.print(numero + "*" + i + "=" + (i * numero) + "     ");
+			System.out.print(numero + "/" + i + "=" + (x / i) + "     ");
+			System.out.println(" ");
+		}
+
+	}
+
+	public static void questao23() {
+
+		sc = new Scanner(System.in);
+
+		System.out.println("Digite a base:");
+		int i, b = sc.nextInt();
+		System.out.println("Digite o expoente:");
+		int expoente = sc.nextInt();
+		double resultado = 0;
+
+		for (i = 0; i < expoente; i++)
+			resultado = resultado + b;
+		System.out.println("A potencia eh: " + resultado);
+
+	}
+
+	public static void questao24() {
+		int i, par = 0, impar = 0;
+		sc = new Scanner(System.in);
+		System.out.println("Digite 10 Numeros inteiros:");
+		int numero;
+
+		for (i = 0; i < 10; i++) {
+			numero = sc.nextInt();
+			if (numero % 2 == 0)
+				par++;
+			else
+				impar++;
+		}
+
+		System.out.println("Quantidade de pares:" + par);
+		System.out.println("Quantidade de impares:" + impar);
+	}
+
+	public static void questao25() {
+
+		sc = new Scanner(System.in);
+
+		int i, n;
+		double fib1 = 0, fib2 = 1, fib3;
+
+		System.out.println("Digite a serie:");
+		n = sc.nextInt();
+
+		for (i = 0; i < n; i++) {
+			if (i == 0)
+				System.out.printf("%.0f ,", (fib1));
+			if (i == 1)
+				System.out.printf("%.0f ,", (fib2));
+			if (i > 1) {
+				fib3 = fib2 + fib1;
+				fib1 = fib2;
+				fib2 = fib3;
+				System.out.printf("%.0f ,", (fib3));
+			}
+		}
+	}
+
+	public static void questao26() {
+		sc = new Scanner(System.in);
+		int i;
+		double fib1 = 0, fib2 = 1, fib3;
+
+		for (i = 0; i < 500; i++) {
+			if (i == 0)
+				System.out.printf("%.0f ,", (fib1));
+			if (i == 1)
+				System.out.printf("%.0f ,", (fib2));
+			if (i > 1) {
+
+				fib3 = fib2 + fib1;
+				fib1 = fib2;
+				fib2 = fib3;
+
+				System.out.printf("%.0f ,", (fib3));
+			}
+		}
+	}
+
+	public static void questao27() {
+
+		double fatorial = 1;
+		int i;
+		sc = new Scanner(System.in);
+		System.out.println("Digite o Fatorial: ");
+		int n = sc.nextInt();
+
+		for (i = n; i > 0; i--)
+			fatorial = fatorial * i;
+		System.out.println("O fatorial eh: " + fatorial);
+	}
+
+	public static void questao28() {
+		sc = new Scanner(System.in);
+		int cont = 0, i;
+		System.out.println("Digite um Numero Para verificar:");
+		int n = sc.nextInt();
+
+		for (i = 1; i <= n; i++) {
+			if (n % i == 0)
+				cont++;
+		}
+
+		if (cont == 2)
+			System.out.println("O numero é primo!!!");
+		else
+			System.out.println("O numero nao é primo!!!");
+	}
+
+	public static void questao29() {
+
+		sc = new Scanner(System.in);
+		int n, i, num;
+		double soma = 0, media;
+
+		System.out.println("Digite a quantidade de Notas:");
+		n = sc.nextInt();
+		System.out.println("Digite as Notas");
+		for (i = 0; i < n; i++) {
+
+			System.out.println(i + 1 + " Nota:");
+			num = sc.nextInt();
+			soma = soma + num;
+		}
+		media = soma / n;
+		System.out.println("A media dos numero é: " + media);
+	}
+
+	public static void questao30() {
+
+		int n, idade, i;
+
+		float soma = 0, media;
+		sc = new Scanner(System.in);
+		System.out.println("Digite a quantidade de pessoas: ");
+		n = sc.nextInt();
+
+		System.out.println("Digite as idades: ");
+		for (i = 0; i < n; i++) {
+			System.out.println(i + 1 + " - idade:");
+			idade = sc.nextInt();
+			soma = soma + idade;
+		}
+		media = soma / n;
+		if (media >= 0 && media <= 25)
+			System.out.println("A turma é considerada jovem!!!");
+		if (media >= 26 && media <= 60)
+			System.out.println("A turma é considerada adulta ");
+		if (media > 60)
+			System.out.println("A turma é considerada idosa ");
+	}
+
+	public static void questao31() {
+		sc = new Scanner(System.in);
+		int i, turma, alunos;
+		double soma = 0, media;
+
+		System.out.println("Digite a quantidade de turmas: ");
+		turma = sc.nextInt();
+
+		for (i = 0; i < turma; i++) {
+			System.out.println("Digite a quantidade de alunos da turma:" + (i + 1));
+			alunos = sc.nextInt();
+			soma = soma + alunos;
+		}
+		media = soma / turma;
+		System.out.println("A media de alunos por sala é: " + media);
+	}
+
+	public static void questao32() {
+		sc = new Scanner(System.in);
+		int i;
+		double valor, soma = 0, media;
+		System.out.println("Digite a quantidade de CDS:");
+		int qnt = sc.nextInt();
+
+		for (i = 0; i < qnt; i++) {
+			System.out.println("Digite a preco de CD:" + (i + 1));
+			valor = sc.nextFloat();
+			soma = soma + valor;
+		}
+		media = soma / qnt;
+		System.out.println("A media do preço dos CDS é: " + media);
+	}
+
+	public static void questao33() {
+		int i;
+		double valor;
+
+		for (i = 1; i <= 50; i++) {
+			valor = i * 1.99;
+			System.out.println(i + " Items: " + valor);
+		}
+	}
+
+	public static void questao34() {
+		sc = new Scanner(System.in);
+		int i;
+		double valor;
+		System.out.println("Digite o preço do Pão:");
+		double preco = sc.nextFloat();
+
+		for (i = 1; i <= 50; i++) {
+			valor = i * preco;
+			System.out.println(i + " Items: " + valor);
+		}
+	}
+
+	public static void questao35() {
+		sc = new Scanner(System.in);
+		int i = 0;
+		float produto, soma = 0, dinheiro, troco;
+		do {
+			i++;
+			System.out.println("Digite o Produto " + i);
+			produto = sc.nextFloat();
+			soma = soma + produto;
+		} while (produto != 0);
+
+		System.out.println("Digite o valor pago em dinheiro pelo Cliente: ");
+		dinheiro = sc.nextFloat();
+
+		troco = dinheiro - soma;
+		System.out.println("O troco é: " + troco);
+	}
+
+	public static void questao36() {
+		sc = new Scanner(System.in);
+		int i, fatorial = 1, n;
+
+		System.out.println("Digite o numero: ");
+		n = sc.nextInt();
+
+		for (i = n; i > 0; i--) {
+			fatorial = fatorial * i;
+			System.out.print(i + ".");
+		}
+		System.out.print("= " + fatorial);
+	}
+
+	public static void questao37() {
+		sc = new Scanner(System.in);
+		int i, quantidade;
+		double maior = 0, menor = 0, soma = 0, media, temp;
+		System.out.println("Digite a quantidade de temperaturas: ");
+		quantidade = sc.nextInt();
+
+		System.out.println("Digite as Temperaturas: ");
+		for (i = 0; i < quantidade; i++) {
+			temp = sc.nextFloat();
+			soma = soma + temp;
+			if (i == 0) {
+				maior = temp;
+				menor = temp;
+			}
+			if (temp > maior)
+				maior = temp;
+			if (temp < menor)
+				menor = temp;
+		}
+		media = soma / quantidade;
+		System.out.println("A maior temperatura é: " + maior);
+		System.out.println("A menor temperatura é: " + menor);
+		System.out.println("A media das temperaturas eh: " + media);
+	}
+
+	public static void questao38() {
+		sc = new Scanner(System.in);
+		int i, num, cont = 0;
+
+		System.out.println("Digite um numero inteiro: ");
+		num = sc.nextInt();
+
+		for (i = 1; i <= num; i++) {
+			if (num % i == 0)
+				cont++;
+		}
+
+		if (cont == 2)
+			System.out.println("O numero é primo:");
+		else
+			System.out.println("O numero nao é primo");
+	}
+
+	public static void questao39() {
+		sc = new Scanner(System.in);
+		int i, cont = 0, x = 1, n, primo;
+		System.out.println("Digite a quantidade de numero Primos:");
+		n = sc.nextInt();
+
+		for (i = 1; cont != n; i++) {
+			primo = 0;
+			for (i = 1; i <= x; i++) {
+				if (x % i == 0)
+					primo++;
+			}
+			if (primo == 2) {
+				System.out.println(" " + x);
+				cont++;
+			}
+			x++;
+		}
+
+	}
+
+	public static void questao40() {
+		sc = new Scanner(System.in);
+		int i,comeco,fim;
+		System.out.println("Digite o numero:");
+		int numero = sc.nextInt();
+		double x = numero;
+		System.out.println("Começar por: ");
+		comeco = sc.nextInt();
+		System.out.println("Terminar em: ");
+		fim = sc.nextInt();
+
+		for (i = comeco; i <= fim; i++) {
+			System.out.print(numero + "+" + i + "=" + (i + numero) + "     ");
+			System.out.print(numero + "-" + i + "=" + (numero - i) + "     ");
+			System.out.print(numero + "*" + i + "=" + (i * numero) + "     ");
+			System.out.print(numero + "/" + i + "=" + (x / i) + "     ");
+			System.out.println(" ");
+		}
+	}
+
+	public static void questao41() {
+		sc = new Scanner(System.in);
+		int ano, i;
+		System.out.println("Digite o ano Atual: ");
+		ano = sc.nextInt();
+		System.out.println("Digite o salário inicial da Pessoa: ");
+		double salario = sc.nextDouble();
+		double pessoa = 1.5;
+
+		for (i = 1995 + 1; i < ano; i++) {
+			salario = salario + (salario * pessoa);
+			pessoa = pessoa * 2;
+		}
+		System.out.println("O salario atual é: " + salario);
+	}
+
+	public static void questao42() {
+		sc = new Scanner(System.in);
+		int op;
+		double quantidade,soma,total=0;
+		do {
+		System.out.println("Especificação    Código    Preço");
+		System.out.println("Cachorro Quente   [100]    R$1,20");
+		System.out.println("Bauro Simples     [101]    R$1,30");
+		System.out.println("Bauro Com ovo     [102]    R$1,50");
+		System.out.println("Hambúrguer        [103]    R$1,20");
+		System.out.println("Cheesburguer      [104]    R$1,30");
+		System.out.println("Refrigerante      [105]    R$1,30");
+		System.out.println("Digite o Código do Produto:");
+		System.out.println("Ou clique em [0] para encerrar o programa!!!");
+		op = sc.nextInt();
+		
+		switch(op) {
+		case 100:System.out.println("\n\nCachorro Quente!!!");
+		System.out.println("Digite a Quantidade:");
+		quantidade = sc.nextDouble();
+		soma = quantidade * 1.20;
+		total = total+soma;
+		break;
+		case 101:System.out.println("\n\nBauro Simples!!!");
+		System.out.println("Digite a Quantidade:");
+		quantidade = sc.nextDouble();
+		soma = quantidade * 1.30;
+		total = total+soma;
+		break;
+		case 102:System.out.println("\n\nBauro Com ovo!!!");
+		System.out.println("Digite a Quantidade:");
+		quantidade = sc.nextDouble();
+		soma = quantidade * 1.50;
+		total = total+soma;
+		break;
+
+		case 103:System.out.println("\n\nHambúrguer!!!");
+		System.out.println("Digite a Quantidade:");
+		quantidade = sc.nextDouble();
+		soma = quantidade * 1.20;
+		total = total+soma;
+		break;
+
+		case 104:System.out.println("\n\nCheesburguer!!!");
+		System.out.println("Digite a Quantidade:");
+		quantidade = sc.nextDouble();
+		soma = quantidade * 1.30;
+		total = total+soma;
+		break;
+		case 105:System.out.println("\n\nRefrigerante!!!");
+		System.out.println("Digite a Quantidade:");
+		quantidade = sc.nextDouble();
+		soma = quantidade * 1.00;
+		total = total+soma;
+		break;
+		
+		case 0:System.out.println("Venda Encerrada Com Sucesso!!!:");
+		break;
+		
+		default:System.out.println("Opção Inválida!!!\n\n");
+		break;
+		}
+		}while(op!=0);
+		
+		System.out.println("Total da sua compra é:"+total);
+}
+	public static void questao43() {
+		sc = new Scanner(System.in);
+		int i;
+		System.out.println("Digite o limite da Série");
+		int  n = sc.nextInt();
+		int valor1 = 1, valor2 = 1;
+		double x, y, valor3;
+
+		System.out.print("S= ");
+		for (i = 1; i <= n; i++) {
+			x = valor1;
+			y = valor2;
+			valor3 = x / y;
+			System.out.print(valor3 + ",");
+			valor1++;
+			valor2 = valor2 + 2;
+		}
+	}
+
+	public static void quetao44() {
+		sc = new Scanner(System.in);
+		int i, n, h, valor2 = 1;
+		System.out.println("Digite o limite da Série: ");
+		n = sc.nextInt();
+
+		System.out.print("H= ");
+		for (i = 0; i < n; i++) {
+			h = valor2 + 1;
+			System.out.print(h + ",");
+			valor2++;
+		}
+	}
+
+	public static void quetao45() {
+		sc = new Scanner(System.in);
+		int i;
+		System.out.println("Digite o limite da Série:");
+		int n = sc.nextInt();
+		int valor1 = 1, valor2 = 1;
+		double x, y, valor3, soma = 0;
+
+		System.out.print("S= ");
+		for (i = 1; i <= n; i++) {
+			x = valor1;
+			y = valor2;
+			valor3 = x / y;
+			soma = soma + valor3;
+			System.out.print(valor3 + ",");
+			valor1++;
+			valor2 = valor2 + 2;
+		}
+		System.out.println(" ");
+		System.out.println("A soma da Série é: " + soma);
+	}
+
+	public static void questao46() {
+		sc = new Scanner(System.in);
+		int i, n, h, valor2 = 1;
+		System.out.println("Digite o limite da serie: ");
+		n = sc.nextInt();
+
+		System.out.print("H= ");
+		for (i = 0; i < n; i++) {
+			h = valor2 + 1;
+			System.out.print(h + ",");
+			valor2++;
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// questao01();
+		// questao02();
+		// questao03();
+		// questao04();
+		// questao05();
+		// questao06();
+		// questao07();
+		// questao08();
+		// questao09();
+		// questao10();
+		// questao11();
+		// questao12();
+		// questao13();
+		// questao14();
+		// questao15();
+		// questao16();
+		// questao17();
+		// questao18();
+		// questao19();
+		// questao20();
+		// questao21();
+		// questao22();
+		// questao23();
+		// questao24();
+		// questao25();
+		// questao26();
+		// questao27();
+		// questao28();
+		// questao29();
+		// questao30();
+		// questao31();
+		// questao32();
+		// questao33();
+		// questao34();
+		// questao35();
+		// questao36();
+		// questao37();
+		// questao38();
+		// questao39();
+		// questao40();
+		// questao41();
+		// questao42();
+		// questao43();
+		// questao44();
+		// questao45();
+		// questao46();
+	}
+
+}
